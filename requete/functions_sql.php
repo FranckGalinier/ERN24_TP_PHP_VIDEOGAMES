@@ -22,12 +22,15 @@ function get_all_games(){
 function get_game_by_id($jeu_id){
   global $connexion;
   //on crée la requete, on récupère l'id de chaque jouet dans la variable
-  $query = "SELECT j.titre, j.description, j.image_path, c.label FROM jeu as j
+  $query = "SELECT j.titre, j.description, j.image_path, GROUP_CONCAT(DISTINCT c.label SEPARATOR ', ') AS console_labels, j.date_sortie,
+  r.image_path as imagepegi, r.label as age, n.note_media as media, n.note_utilisateur as utilisateur
+  FROM jeu as j
   INNER JOIN restriction_age as r ON j.age_id = r.id
   INNER JOIN note as n ON j.note_id = n.id
-  INNER JOIN game_console as gc ON j.id = gc.id
-  INNER JOIN console as c ON gc.id = c.id
-  WHERE j.id = ?";
+  INNER JOIN game_console as gc ON j.id = gc.jeu_id
+  INNER JOIN console as c ON gc.console_id = c.id
+  WHERE gc.jeu_id = ?
+  GROUP BY j.id";
 
   //on prépare la requete
   if($stmt = mysqli_prepare($connexion, $query)){

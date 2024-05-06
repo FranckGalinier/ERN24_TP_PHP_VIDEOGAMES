@@ -29,6 +29,7 @@ body {
 .game_image {
   width: 100%;
   object-fit: contain;
+  height: 150px;
 }
 .game_name{
   text-align: center;
@@ -37,4 +38,11 @@ body {
   text-align: center;
   font-size: 35px;
   color: #000;
+}
+.pegi{
+  height: 50px;
+  width: 50px;
+}
+.bi-star-fill{
+  color: rgb(189, 189, 13);
 }
