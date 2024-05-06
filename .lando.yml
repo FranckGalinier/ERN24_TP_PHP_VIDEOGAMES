@@ -1,0 +1,18 @@
+name: phptp-jeuxvideos #on donne un nom (pas de majuscule, pas d'espaces, pas de caractères spèciaux, pas d'underscore!!)
+recipe: lamp #nom pour choisir la recette pour avoir le serveur
+
+config:
+  php: '8.2' # version de php
+  webroot: . # on indique que le fichier index.php est à la racine de ce dossier
+  xdebug: 'develop,debug'
+
+services:
+  appserver:
+    config:
+      php: ./.lando.config/php.ini #on indique le chemin du fichier php.ini
+  database:
+    portforward: 3307 #on indique le port de la base de données
+    creds:
+      user: admin
+      password: admin
+      database: videogames
