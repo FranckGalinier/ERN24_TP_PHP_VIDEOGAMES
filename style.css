@@ -16,7 +16,6 @@ body {
 #container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 51%;
 }
 
@@ -26,23 +25,85 @@ body {
   object-fit: contain;
 }
 
-.game_image {
+.image-index {
   width: 100%;
-  object-fit: contain;
-  height: 150px;
+  height: 300px;
 }
-.game_name{
+
+.game_name {
   text-align: center;
 }
-.game_price{
+
+.game_price {
   text-align: center;
-  font-size: 35px;
   color: #000;
 }
-.pegi{
+
+.pegi {
   height: 50px;
   width: 50px;
 }
-.bi-star-fill{
-  color: rgb(189, 189, 13);
+
+.bi-star-fill {
+  color: #ffc107
+}
+
+.btn {
+  color: white;
+  margin-right: 2px;
+}
+
+.btn:hover {
+  color: rgb(13, 110, 253);
+  background-color: white !important;
+  border: solid 1px rgb(13, 110, 253);
+}
+
+.card-title {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.card-text {
+  font-size: 12px;
+}
+
+.btn-list {
+  background-color: rgb(13, 110, 253);
+}
+
+.card {
+  margin: 10px;
+}
+
+.card-body {
+  padding: 0;
+}
+
+.note-bleu {
+  color: rgb(13, 110, 253);
+  font-weight: bold;
+}
+
+.titre {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+
+.index-description {
+  margin: 10px;
+}
+
+.collapse {
+  border-bottom: 1px solid gray;
+}
+p{
+  font-size: 12px;
+}
+.avis{
+  margin-top: 10px;
+}
+.age{
+  margin-bottom: 0;
 }
