@@ -30,13 +30,14 @@ function render_game_detail($jeu){ ?>
       <div class="p-2 pt-0">
         <h2><span class="note-bleu titre"><?php echo $jeu['titre'] ?></span></h2>
         <?php
-        
-        
-        foreach($jeu["console_labels"])
-          echo "<p class="badge rounded-pill text-bg-primary">"$jeu['console_labels']; 
-         
-        
-         ?> </p>
+        // ici on récupère les labels pour les afficher un dans chaque badge
+        $array = explode(',', $jeu['console_labels']);
+        foreach ($array as $jeux) {
+        echo '<p class="badge rounded-pill text-bg-primary">' . $jeux . '</p>';
+      
+        }
+        ?>
+
         <p><strong> Synopsis </strong>: <?php echo $jeu['description'] ?></p>
 
         <p> Date de sortie :<span class="note-bleu"> <?php echo  date('d/m/Y',strtotime($jeu['date_sortie'])) ?></span></p>

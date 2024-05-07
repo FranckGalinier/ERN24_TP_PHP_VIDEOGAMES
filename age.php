@@ -7,9 +7,9 @@
 
 
 <?php $age = intval($_GET['age_id']) ?>
-
-<h1> Jeux par age</h1>
-
+<div class="d-flex justify-content-center mb-3">
+<h1>Jeux par age</h1>
+</div>
 
 <div class="d-flex flex-wrap justify-content-center">
   <?php get_game_by_age($age) ?>

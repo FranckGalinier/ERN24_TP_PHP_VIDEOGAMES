@@ -8,7 +8,9 @@
 
 <?php $console_id = intval($_GET['console_id']) ?>
 
-<h1> Jeux par console</h1>
+<div class="d-flex justify-content-center mb-3">
+  <h1> Jeux par console </h1>
+</div>
 
 <div class="d-flex flex-wrap justify-content-center">
   <?php get_game_by_console($console_id) ?>
