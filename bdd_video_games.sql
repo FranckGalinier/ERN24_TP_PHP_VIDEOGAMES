@@ -13,6 +13,14 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
+-- table user qui contient les informations des utilisateurs
+CREATE TABLE IF NOT EXISTS `user`(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email  VARCHAR(150) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    created_at INT
+);
+
 
 -- Listage de la structure de la table video-games. console
 DROP TABLE IF EXISTS `console`;

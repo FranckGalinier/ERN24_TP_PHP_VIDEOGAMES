@@ -68,9 +68,6 @@ body {
   font-size: 12px;
 }
 
-.btn-list {
-  background-color: rgb(13, 110, 253);
-}
 
 .card {
   margin: 10px;
@@ -94,10 +91,6 @@ body {
 .index-description {
   margin: 10px;
 }
-
-.collapse {
-  border-bottom: 1px solid gray;
-}
 p{
   font-size: 12px;
 }
@@ -109,4 +102,39 @@ p{
 }
 .badge{
   margin-right: 5px;
+}
+
+.link{
+  text-decoration: none !important;
+  color: black;
+  font-size: 12px !important;
+}
+form{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.navlist{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  color: white !important;
+  background-color: rgb(13, 110, 253);
+}
+
+.nav-item:hover{
+  background-color: rgb(13, 82, 185) !important;
+}
+.dropdown-item{
+  color:white !important;
+}
+.dropdown-item:hover{
+  background-color: white !important;
+  color: rgb(13, 110, 253) !important;
+  font-weight: bold;
+}
+.welcome_text{
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
 }

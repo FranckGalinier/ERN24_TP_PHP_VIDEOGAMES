@@ -9,12 +9,12 @@ function get_all_games($order, $note){
     $query .= "ORDER BY prix ASC";
   } else if ($order == 'desc') {
     $query .= "ORDER BY prix DESC";
-  } else if ($note == 'media'){
-    $query .= "INNER JOIN note ON note.id = jeu.note_id
-    ORDER BY note_media DESC";
-  }else if ($note == 'user'){
-    $query .= "INNER JOIN note ON note.id = jeu.note_id
-    ORDER BY note_utilisateur DESC";
+  // } else if ($note == 'media'){
+  //   $query .= "INNER JOIN note ON note.id = jeu.note_id
+  //   ORDER BY note_media DESC";
+  // }else if ($note == 'user'){
+  //   $query .= "INNER JOIN note ON note.id = jeu.note_id
+  //   ORDER BY note_utilisateur DESC";
   }
   if($result = mysqli_query($connexion, $query)){ //on ouvre la connexion et on fait la requete
     //on vérifie que l'on a des resultats
@@ -76,7 +76,7 @@ function get_console_with_count(){
     //on peut parcourir les résultats
     while ($console = mysqli_fetch_assoc($result)) { ?>
       <li>
-        <a class="dropdown-item btn" href="../console.php?console_id=<?php echo $console['id'] ?>">
+        <a class="dropdown-item" href="../console.php?console_id=<?php echo $console['id'] ?>">
           <?php echo $console['label'] ?> ( <?php echo $console['total'] ?> )
         </a>
       </li>
@@ -124,7 +124,7 @@ function get_age(){
     //on peut parcourir les résultats
     while ($id = mysqli_fetch_assoc($result)) { ?>
       <li>
-        <a class=" btn dropdown-item" href="../age.php?age_id=<?php echo $id['id'] ?>">+
+        <a class="dropdown-item" href="../age.php?age_id=<?php echo $id['id'] ?>">+
           <?php echo $id['label'] ?> ans
         </a>
       </li>
