@@ -23,7 +23,7 @@ function form($action, $title, $button_name, $text, $link, $button_link){ ?>
         <input class="form-control" type="password" name="password" placeholder="Saisir votre mot de passe" title="Le mot de passe doit contenir au moins 8 caractères, une majuscule, une minuscule et un chiffre">
         </div>
 
-        <button class="btn btn-primary" type="submit"> <?php echo $button_name ?></button>
+        <button class="btn bg-primary" type="submit"> <?php echo $button_name ?></button>
           <div class="d-flex justify-content-center align-items-center">
           <p class="sub_text m-3"><?php echo $text ?></p>
           <a class="link" href="<?php echo $link ?>"><?php echo $button_link ?></a>

@@ -75,7 +75,6 @@
             Mon compte
           </a>
           <ul class="dropdown-menu bg-primary">
-              <li><a class="dropdown-item" href="../add_game.php">Ajouter des jeux</a></li>
               <li><a class="dropdown-item" href="../requete/logout.php">Se déconnecter</a></li>
             </ul>
           </li>
