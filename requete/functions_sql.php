@@ -9,12 +9,12 @@ function get_all_games($order, $note){
     $query .= "ORDER BY prix ASC";
   } else if ($order == 'desc') {
     $query .= "ORDER BY prix DESC";
-  // } else if ($note == 'media'){
-  //   $query .= "INNER JOIN note ON note.id = jeu.note_id
-  //   ORDER BY note_media DESC";
-  // }else if ($note == 'user'){
-  //   $query .= "INNER JOIN note ON note.id = jeu.note_id
-  //   ORDER BY note_utilisateur DESC";
+  } else if ($note == 'media'){
+    $query .= "INNER JOIN note ON note.id = jeu.note_id
+     ORDER BY note_media DESC";
+  }else if ($note == 'user'){
+     $query .= "INNER JOIN note ON note.id = jeu.note_id
+    ORDER BY note_utilisateur DESC";
   }
   if($result = mysqli_query($connexion, $query)){ //on ouvre la connexion et on fait la requete
     //on vérifie que l'on a des resultats
